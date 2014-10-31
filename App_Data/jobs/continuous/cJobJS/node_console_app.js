@@ -15,7 +15,7 @@ function whileLoop() {
     console.log('Shutdown detected');
 
     // Write file to show shutdown was detected
-    fs.writeFileSync('d:\\home\\site\\shutdown.detected', 'Shutdown detected');
+    fs.writeFileSync(process.env['HOME'] + '\\site\\shutdown.detected', 'Shutdown detected');
   }
 }
 
