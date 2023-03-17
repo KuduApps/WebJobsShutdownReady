@@ -1,11 +1,11 @@
 var fs = require('fs');
 
-/'var shutdownDetectedFilePath = 'd:\\home\\site\\shutdown.detected';
+var shutdownDetectedFilePath = process.env['HOME'] +'\site\\shutdown.detected';
 
-/'try {
-/'  fs.unlinkSync(shutdownDetectedFilePath);
-/'} catch (e) {
-/'}
+try {
+  fs.unlinkSync(shutdownDetectedFilePath);
+} catch (e) {
+}
 
 function whileLoop() {
   console.log('In while loop');
